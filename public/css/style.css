@@ -1,0 +1,356 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Base ===== */
+body {
+  background-color: #faf8f5;
+  color: #333333;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ===== Typography ===== */
+.site-title {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.post-title,
+.post-full-title {
+  font-family: "Playfair Display", serif;
+}
+
+/* ===== Header ===== */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0ddd6;
+}
+
+.site-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333333;
+  text-decoration: none;
+}
+
+/* ===== Buttons ===== */
+.btn-add,
+.btn-submit {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: #333333;
+  color: #faf8f5;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+/* ===== Post Titles ===== */
+.post-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333333;
+  text-decoration: none;
+}
+
+.post-full-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+/* ===== Body Text ===== */
+.post-full-content {
+  font-size: 1.05rem;
+  white-space: pre-line;
+}
+
+/* ===== Post List (Homepage) ===== */
+.post-list {
+  list-style: none;
+}
+
+.post-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #e0ddd6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ===== Action Links/Buttons ===== */
+.btn-edit {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333333;
+  text-decoration: none;
+  padding: 8px 14px;
+  border: 1px solid #333333;
+  border-radius: 4px;
+}
+
+.btn-delete {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: transparent;
+  color: #a14545;
+  border: 1px solid #a14545;
+  border-radius: 4px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.delete-form {
+  display: inline;
+}
+
+/* ===== Single Post Page ===== */
+.post-full {
+  padding-top: 10px;
+}
+
+.post-full .post-actions {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e0ddd6;
+}
+
+/* ===== Hover & Active States ===== */
+
+.site-title:hover {
+  opacity: 0.75;
+}
+
+.btn-add:hover {
+  background-color: #1a1a1a;
+  transform: translateY(-1px);
+}
+
+.btn-add:active {
+  transform: translateY(0px);
+}
+
+.btn-submit:hover {
+  background-color: #1a1a1a;
+  transform: translateY(-1px);
+}
+
+.btn-submit:active {
+  transform: translateY(0px);
+}
+
+.btn-edit:hover {
+  background-color: #333333;
+  color: #faf8f5;
+}
+
+.btn-edit:active {
+  transform: translateY(1px);
+}
+
+.btn-delete:hover {
+  background-color: #a14545;
+  color: #faf8f5;
+}
+
+.btn-delete:active {
+  transform: translateY(1px);
+}
+
+.post-title:hover {
+  color: #6b6b6b;
+}
+
+/* Smooth transitions for all the above */
+.site-title,
+.btn-add,
+.btn-submit,
+.btn-edit,
+.btn-delete,
+.post-title {
+  transition: all 0.15s ease;
+}
+
+/* ===== Post Cards (Homepage) ===== */
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.post-item {
+  background-color: #ffffff;
+  border: 1px solid #e0ddd6;
+  border-bottom: 1px solid #e0ddd6;
+  border-radius: 8px;
+  padding: 20px 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.post-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.post-item:last-child {
+  border-bottom: 1px solid #e0ddd6;
+}
+
+.page-header {
+  margin-bottom: 48px;
+}
+
+/* ===== Forms ===== */
+.post-form {
+  background-color: #ffffff;
+  border: 1px solid #e0ddd6;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555555;
+  margin-bottom: 8px;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: #333333;
+  padding: 12px 14px;
+  border: 1px solid #d8d4cc;
+  border-radius: 6px;
+  background-color: #faf8f5;
+}
+
+.form-group textarea {
+  min-height: 200px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #333333;
+  background-color: #ffffff;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid #e0ddd6;
+  text-align: center;
+}
+
+.site-footer p {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #6b6b6b;
+}
+
+.site-footer a {
+  color: #6b6b6b;
+  text-decoration: underline;
+  text-decoration-color: #d8d4cc;
+  transition: color 0.15s ease;
+}
+
+.site-footer a:hover {
+  color: #333333;
+}
+
+/* ===== Empty State ===== */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-state p {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #6b6b6b;
+  margin-bottom: 24px;
+}
+
+/* ===== Responsive (Mobile) ===== */
+@media (max-width: 600px) {
+  .container {
+    padding: 24px 16px;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .post-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .post-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .post-full-title {
+    font-size: 1.7rem;
+  }
+
+  .site-title {
+    font-size: 1.6rem;
+  }
+
+  .post-form {
+    padding: 20px;
+  }
+}

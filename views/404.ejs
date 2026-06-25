@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chronicle — New Post</title>
+    <title>Chronicle — Post Not Found</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,23 +24,11 @@
         <h1><a href="/" class="site-title">Chronicle</a></h1>
       </header>
 
-      <form action="/posts" method="POST" class="post-form">
-        <div class="form-group">
-          <label for="title">Title</label>
-          <input type="text" id="title" name="title" placeholder="Post title" />
-        </div>
+      <div class="empty-state">
+        <p>This post doesn't exist — it may have been deleted.</p>
+        <a href="/" class="btn-add">← Back to Homepage</a>
+      </div>
 
-        <div class="form-group">
-          <label for="content">Content</label>
-          <textarea
-            id="content"
-            name="content"
-            placeholder="Write your content here!"
-          ></textarea>
-        </div>
-
-        <button type="submit" class="btn-submit">Publish</button>
-      </form>
       <footer class="site-footer">
         <p>
           Made with ❤️ by

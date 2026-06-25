@@ -3,16 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>blogs home page</title>
+    <title>Chronicle — Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" sizes="any" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✒️</text></svg>">
+
 </head>
 <body>
-    <a href="/posts/new">+Add new post</a>
-    <% posts.forEach(function(items) { %>
-        <li> <a href="/posts/<%= items.id%>"><%= items.title %></a> <a href="/posts/<%= items.id %>/edit">EDit </a>
-        <form action="/posts/<%= items.id %>/delete" method="POST">
-            <button type="submit">Delete</button>
-        </form>
-        </li>
-    <% }); %>
+    <div class="container">
+        <header class="page-header">
+            <h1><a href="/" class="site-title">Chronicle</a></h1>
+            <a href="/posts/new" class="btn-add">+ Add new post</a>
+        </header>
+
+        <% if (posts.length === 0) { %>
+            <div class="empty-state">
+                <p>No posts yet — write your first one!</p>
+                <a href="/posts/new" class="btn-add">+ Add new post</a>
+            </div>
+        <% } else { %>
+            <ul class="post-list">
+                <% posts.forEach(function(items) { %>
+                    <li class="post-item">
+                        <a href="/posts/<%= items.id %>" class="post-title"><%= items.title %></a>
+                        <div class="post-actions">
+                            <a href="/posts/<%= items.id %>/edit" class="btn-edit">Edit</a>
+                            <form action="/posts/<%= items.id %>/delete" method="POST" class="delete-form" onsubmit="return confirm('Are you sure you want to delete this post?')">
+                                <button type="submit" class="btn-delete">Delete</button>
+                            </form>
+                        </div>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } %>
+
+        <footer class="site-footer">
+            <p>Made with ❤️ by <a href="https://github.com/Sahil-Build" target="_blank" rel="noopener">Sahil</a></p>
+        </footer>
+    </div>
 </body>
 </html>
