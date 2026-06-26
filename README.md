@@ -2,6 +2,10 @@
 
 A full-stack CRUD blog built with Node.js, Express, and EJS — my capstone project for learning backend web development.
 
+🔗 **Live demo:** [chronicle-ozvw.onrender.com](https://chronicle-ozvw.onrender.com)
+
+_Note: hosted on a free tier — the first load may take 30-60 seconds if the app has been idle._
+
 ## Features
 
 - Full CRUD: create, read, update, and delete blog posts
